@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author chanyounglee
+ *
+ */
+module freedomgame {
+}
