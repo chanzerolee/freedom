@@ -34,9 +34,21 @@
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="234"/>
-		<item key="DIALOG_Y_ORIGIN" value="-42"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="557"/>
 		<item key="DIALOG_HEIGHT" value="639"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="renameSubpackages" value="false"/>
 	</section>
 </section>

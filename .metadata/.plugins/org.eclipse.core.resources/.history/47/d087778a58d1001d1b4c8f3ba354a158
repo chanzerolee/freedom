@@ -1,0 +1,7 @@
+package gmae.controller;
+
+public class GameController {
+		
+	Scanner stdin = new Scanner(System.in);
+	public void 
+}
