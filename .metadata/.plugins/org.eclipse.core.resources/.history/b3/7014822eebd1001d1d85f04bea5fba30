@@ -1,0 +1,22 @@
+package freedomgame;
+
+public class Monster {
+	int level;
+	int hp;
+	Monster(int level){
+		this.level = level;
+		this.hp = setHp();
+	}
+	public void setHp() {
+		if(level == 1) {
+			this.hp =100;
+		}else if(level == 2){
+			this.hp = 700;
+		}else if(level == 3){
+			this.hp = 5000;
+		}else {
+			// 에러 잡아
+		}
+	}
+	
+}

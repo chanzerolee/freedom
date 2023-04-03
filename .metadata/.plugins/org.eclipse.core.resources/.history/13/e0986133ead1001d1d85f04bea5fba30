@@ -1,0 +1,6 @@
+package freedomgame;
+
+public class Dongeon {
+	int hp;
+	Monster
+}

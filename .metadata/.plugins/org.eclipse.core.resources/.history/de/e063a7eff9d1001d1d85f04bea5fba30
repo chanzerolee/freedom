@@ -1,0 +1,32 @@
+package freedomgame;
+import java.util.HashMap;
+
+public class User {
+	String name;
+	int money = 1000;
+	int damege = 100;
+	HashMap<HashMap<String,Integer>, Integer> weapon = new HashMap<>();
+	
+	public void setWeaepon() {
+		this.weapon.keySet();
+	}
+	public String getName() {
+		return this.name;
+	}
+	public int getMoney() {
+		return this.money;
+	}
+	public void setMoney(int money) {
+		this.money += money;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public int getDamege() {
+		return damege;
+	}
+	public void getBag() {
+		System.out.println("돈 : "+this.money);
+		System.out.println("무기 : "+this.weapon);
+	}
+}

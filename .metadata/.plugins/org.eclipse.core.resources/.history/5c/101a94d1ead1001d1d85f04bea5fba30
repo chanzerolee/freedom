@@ -1,0 +1,12 @@
+package freedomgame;
+
+public class Monster {
+	int level;
+	int hp;
+	Monster(int level){
+		this.level = level;
+		this.hp = getHp(this.level);
+				
+	}
+	
+}

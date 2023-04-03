@@ -1,27 +1,33 @@
 package freedomgame;
-import java.util.HashMap;
+
+import java.util.Arrays;
 
 public class User {
-	int money;
-	int item;
-	HashMap<String , Integer> bag = new HashMap<>();
-	public User(int money, int item) {
-		this.money = money;
-		this.item = item;
+	String name;
+	private int money = 1000;
+	private int damege = 1;
+	private String weapon = Arrays.toString(Weapon.values());
+	
+	public String getName() {
+		return this.name;
 	}
 	public int getMoney() {
-		return money;
+		return this.money;
 	}
 	public void setMoney(int money) {
-		this.money = money;
+		this.money += money;
 	}
-	public int getItem() {
-		return item;
+	public void setName(String name) {
+		this.name=name;
 	}
-	public void setItem(int item) {
-		this.item = item;
+	public int getDamege() {
+		return damege;
 	}
-	public HashMap getBag() {
-		return bag;
+	public void setDamege(int damege) {
+		this.damege = damege;
+	}
+	public void getImfomation() {
+		System.out.println("돈 : "+getMoney());
+		System.out.println("무기 : "+this.weapon);
 	}
 }

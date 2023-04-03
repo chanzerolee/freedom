@@ -1,0 +1,4 @@
+package gmae.controller;
+public class GameController {
+		GameModel gm = new GameModel();
+}

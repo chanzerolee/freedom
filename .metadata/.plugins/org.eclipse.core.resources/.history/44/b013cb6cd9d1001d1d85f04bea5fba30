@@ -1,0 +1,12 @@
+package game.view;
+
+import gmae.controller.GameController;
+
+public class StartView {
+
+	public static void main(String[] args) {
+		GameController gc = new GameController();
+		gm.playGame();	
+	}
+
+}

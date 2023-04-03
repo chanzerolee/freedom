@@ -1,0 +1,5 @@
+package freedomgame;
+
+public enum Weapon {
+	LongSord(3)
+}

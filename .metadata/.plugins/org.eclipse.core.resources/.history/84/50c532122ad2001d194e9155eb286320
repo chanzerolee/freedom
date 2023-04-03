@@ -1,0 +1,16 @@
+package freedomgame;
+
+public enum Weapon {
+	LONGSORD("LongSord","100","5"),
+	BFSORD("BFSord","500","10"),
+	STEELSORD("SteelSord","3000"),
+	LIGHTSORD("LightSord","10000G","공격력 30");
+	
+	public String weapon;
+	Weapon(String weapon){
+		this.weapon = weapon;
+	}
+	public String getName() {
+		return weapon;
+	}
+}

@@ -1,0 +1,13 @@
+package freedomgame;
+
+public enum Weapon {
+	LongSord("100G"),
+	BFSord("500G"),
+	SteelSord("3000"),
+	LightSord("10000G");
+	
+	public String Weapon;
+	Weapon(Weapon){
+		this.Weapon;
+	}
+}
