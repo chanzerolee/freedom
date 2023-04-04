@@ -1,0 +1,50 @@
+[기능 정의]
+게임 개발 (유저 무기강화 게임) + (던전 만들어서 클리어하면 보상 받기) 
+1. DTO 뭐할지 정의 처음부터 완벽할 수는 없다.
+	- 유저 정보 클래스 
+	- 행동 클래스
+	- 던전 클래스 
+	- 상점 클래스
+	- 몬스터 클래스
+	
+2. 전체 프로젝트의 기능 (메소드 정의 타입, 이름, 파라미터)
+
+class User (돈,이름,무기)----------------------------------
+클래스 변수 
+	- int money , String name , ArrayList<HashMap:int> weapon 
+클래스 메소드
+	- public void getBag //  가진 돈과 무기를 알려준다. 무기 사이즈 0일때 예외처 
+	- public void setWeapon // 무기를 추가한다.
+	- public String 
+	
+class Action -------------------------------------------
+클래스 메소드
+	- public void playGame  
+	- public void goShop (User user)  상점 이동 후 선택  
+	1. 무기 구매
+	2. 무기 판매 
+	3. 무기 강화 
+	4. 장비 착용
+	- public void goDungeon (User user) 던전이동 후 난이도 선택
+	- public void endGame (User user) 종료
+--------------------------------------------------------
+
+class Weapon //HashMap<무기는 String 인데 이름(+강화등급) 가격 : 공격력 >
+변수 `
+	Hashmap<String:int> <무기+강화+가격 : 공격력>
+메소드 
+	public Hashmap<> sell(int num) //선택 번호에 따른 무기 리턴.
+	public void enforce(int num) //선택 번호 무기 강화후 값 변환
+	
+--interface level-------------------------------------------------------
+메소드
+	public void level(int num) 몬스터 생성후 공격력으로 체력 다떨어질때까지 반복문 후 보상.
+	public void level2 
+	public void level3 
+class Monster abstract level-------------------------------------------
+변수
+	int hp 체력
+	Monster (int hp)생성자... 선택 될때 체력 선택되게..
+	
+3. 프로젝트 진행 
+무기 클레스 만들고 enum 사용해보자.... 빡쎄노

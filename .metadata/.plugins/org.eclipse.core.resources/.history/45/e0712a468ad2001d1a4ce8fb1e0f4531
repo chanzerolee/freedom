@@ -1,0 +1,5 @@
+package freedomgame;
+
+public class ExceptionNoNumber {
+
+}

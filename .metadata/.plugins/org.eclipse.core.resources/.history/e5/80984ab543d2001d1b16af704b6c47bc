@@ -1,0 +1,26 @@
+package freedomgame;
+
+public enum Weapon {
+	LONGSORD("LongSord",100,5),
+	BFSORD("BFSord",500,15),
+	STEELSORD("SteelSord",3000,30),
+	LIGHTSORD("LightSord",10000,50);
+	
+	private String weapon;
+	private int price;
+	private int damege;
+	Weapon(String weapon,int price,int damege){
+		this.weapon = weapon;
+		this.price = price;
+		this.damege = damege;
+	}
+	public String getWeapon() {
+		return this.weapon;
+	}
+	public int getPrice() {
+		return this.price;
+	}
+	public int getDamege() {
+		return this.damege;
+	}
+}

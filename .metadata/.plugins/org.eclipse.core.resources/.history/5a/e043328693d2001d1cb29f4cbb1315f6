@@ -1,0 +1,172 @@
+package freedomgame;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Action {
+	Scanner sn = new Scanner(System.in);
+	public int playList() {
+		System.out.println();
+		System.out.println("***광장***");
+		System.out.println("1. 상점");
+		System.out.println("2. 던전");
+		System.out.println("3. 종료하기");
+		System.out.print("입력 : ");
+		
+		return sn.nextInt();
+		
+	}
+	public boolean endGame() {
+		System.out.println();
+		System.out.println("정말 종료하십니까?");
+		System.out.println("1. 예 \n2. 아니오");
+		System.out.print("입력 : ");
+		if(sn.nextInt()==1) {
+			System.out.println();
+			System.out.println("게임을 종료합니다.");
+			return false;
+		}else {
+			return true;
+		}
+	}
+	public int goShop() {
+		System.out.println();
+		System.out.println("0. 유저 정보 확인");
+		System.out.println("1. 무기 구매");
+		System.out.println("2. 무기 강화");
+		System.out.println("3. 광장으로 이동");
+		System.out.print("입력 : ");
+		return sn.nextInt();
+	}
+	// 무기 구매
+	public void buyWeapon(User user) {
+		ArrayList<Weapon> list =new ArrayList<>();
+		System.out.println();
+		System.out.println("0. 구매안함.");
+		for(Weapon w : Weapon.values()) {
+			System.out.println(list.size()+1+". "+w.getWeapon()+" "+w.getPrice()+"G 공격력:"+w.getDamege());
+			list.add(w);
+		}
+		System.out.print("어떤 무기를 가지고 싶나요??(숫자입력)");
+		int num = sn.nextInt()-1;
+		if(num<0) {
+			System.out.println("구매 안할래요");
+		}else if(list.get(num).getPrice() <= user.getMoney()){
+			System.out.println();
+			user.setDamege(list.get(num).getDamege());
+			user.setMoney(-list.get(num).getPrice());
+			user.setWeapon(list.get(num).getWeapon());
+			user.setPrice(list.get(num).getPrice());
+			user.setEnforce(0);
+			System.out.println("무기가 구매되었습니다.");
+		}else {
+			System.out.println();
+			System.out.println("잔액이 부족합니다.");
+		}
+	}
+	// 무기 강화
+	public int enforceWeapon(User user) {
+		// 돈이 없을때 나가기
+		if(user.getMoney() < user.getPrice()/10) {
+			return 0;}
+		// 12강 이상은 만들 수 없다.
+		else if(user.getEnforce() == 12) {
+			System.out.println("더이상 강화할 수 없습니다.");
+			return 3;
+		}
+		// 성공시 트루로 변경
+		boolean success = false;
+		// 확률 만들기
+		int percentage = (int) (Math.random()*100+1);
+		if(user.getEnforce() == 0) {
+			if(percentage < 100) {
+				success = true;
+				user.setEnforce(1);
+				user.setDamege(user.getDamege()+(int)Math.ceil((double)user.getDamege()/10));
+			}
+		}else if(user.getEnforce() == 1) {
+			if(percentage < 90) {
+				success = true;
+				user.setEnforce(2);
+				user.setDamege(user.getDamege()+(int)Math.ceil((double)user.getDamege()/9));
+			}
+		}else if(user.getEnforce() == 2) {
+			if(percentage < 80) {
+				success = true;
+				user.setEnforce(3);
+				user.setDamege(user.getDamege()+(int)Math.ceil((double)user.getDamege()/8));
+			}
+		}else if(user.getEnforce() == 3) {
+			if(percentage < 70) {
+				success = true;
+				user.setEnforce(4);
+				user.setDamege(user.getDamege()+(int)Math.round((double)user.getDamege()/7));
+			}
+		}else if(user.getEnforce() == 4) {
+			if(percentage < 60) {
+				success = true;
+				user.setEnforce(5);
+				user.setDamege(user.getDamege()+(int)Math.round((double)user.getDamege()/6));
+			}
+		}else if(user.getEnforce() == 5) {
+			if(percentage < 50) {
+				success = true;
+				user.setEnforce(6);
+				user.setDamege(user.getDamege()+(int)Math.round((double)user.getDamege()/5));
+			}
+		}else if(user.getEnforce() == 6) {
+			if(percentage < 30) {
+				success = true;
+				user.setEnforce(7);
+				user.setDamege(user.getDamege()+(int)Math.floor(user.getDamege()/4));
+			}
+		}else if(user.getEnforce() == 7) {
+			if(percentage < 18) {
+				success = true;
+				user.setEnforce(8);
+				user.setDamege(user.getDamege()+(int)Math.floor(user.getDamege()/3));
+			}
+		}else if(user.getEnforce() == 8) {
+			if(percentage < 12) {
+				success = true;
+				user.setEnforce(9);
+				user.setDamege(user.getDamege()+(int)Math.floor(user.getDamege()/2));
+			}
+		}else if(user.getEnforce() == 9) {
+			if(percentage < 9) {
+				success = true;
+				user.setEnforce(10);
+				user.setDamege(user.getDamege()+(int)Math.ceil((double)user.getDamege()/2));
+			}
+		}else if(user.getEnforce() == 10) {
+			if(percentage < 6) {
+				success = true;
+				user.setEnforce(11);
+				user.setDamege(user.getDamege()+user.getDamege());
+			}
+		}else if(user.getEnforce() == 11) {
+			if(percentage < 3) {
+				success = true;
+				user.setEnforce(11);
+				user.setDamege(user.getDamege()+user.getDamege()*2);
+			}
+		}else{
+				
+			}
+		user.setMoney(-user.getPrice()/10);
+		if(success == true) {
+			return 1;
+		}else {
+			return 2;
+		}
+		
+	}
+	public int  goDongoen() throws ExceptionNoNumber{
+		System.out.println();
+		System.out.println("0은 광장으로...");
+		System.out.print("난이도 선택  (1~4): ");
+		throw new ExceptionNoNumber("검색 요청하신 프로젝트는 존재하지 않습니다...");
+		return sn.nextInt();
+		
+	}
+}

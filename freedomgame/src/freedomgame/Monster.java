@@ -9,16 +9,16 @@ public class Monster {
 		setHp();
 	}
 	public void setHp() {
-		if(level == 0) {
+		if(level == 1) {
 			this.hp =10;
 			this.name = "달팽이";
-		}else if(level == 1) {
+		}else if(level == 2) {
 			this.hp =100;
 			this.name = "슬라임";
-		}else if(level == 2){
+		}else if(level == 3){
 			this.hp = 700;
 			this.name = "스톤골램";
-		}else if(level == 3){
+		}else if(level == 4){
 			this.hp = 5000;
 			this.name = "....자바";
 		}else {
@@ -33,16 +33,16 @@ public class Monster {
 		return this.hp;
 	}
 	public int die(User user) {
-		if(level == 0) {
+		if(level == 1) {
 			user.setMoney(50);
 			return 50;
-		}else if(level == 1) {
+		}else if(level == 2) {
 			user.setMoney(500);
-			return 500;
-		}else if(level == 2){
-			user.setMoney(2500);
-			return 2500;
+			return 200;
 		}else if(level == 3){
+			user.setMoney(2500);
+			return 1000;
+		}else if(level == 4){
 			user.setMoney(10000);
 			return 10000;
 		}else {

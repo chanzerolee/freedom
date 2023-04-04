@@ -1,0 +1,39 @@
+package freedomgame;
+
+public class User {
+	private int money = 1000;
+	private int damege = 1;
+	private int enfoce = 0;
+	public int getEnforce() {
+		return enfoce;
+	}
+	public void setEnforce(int enforce) {
+		this.enforce += enforce;
+	}
+	private String weapon = "PUNCH";
+
+	public int getMoney() {
+		return this.money;
+	}
+	public void setMoney(int money) {
+		this.money += money;
+	}
+	public String getWeapon() {
+		return weapon;
+	}
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
+	}
+	public int getDamege() {
+		return damege;
+	}
+	public void setDamege(int damege) {
+		this.damege = damege;
+	}
+	public void getImfomation() {
+		System.out.println();
+		System.out.println("돈 : "+getMoney());
+		System.out.println("무기 : "+getWeapon());
+		System.out.println("공격력 : "+getDamege());
+	}
+}

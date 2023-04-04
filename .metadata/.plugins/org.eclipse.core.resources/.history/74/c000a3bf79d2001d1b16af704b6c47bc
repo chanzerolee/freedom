@@ -1,0 +1,54 @@
+package freedomgame;
+
+public class Monster {
+	int level;
+	int hp;
+	String name;
+	public Monster(int level){
+		this.level = level;
+		setHp();
+	}
+	public void setHp() {
+		if(level == 1) {
+			this.hp =10;
+			this.name = "달팽이";
+		}else if(level == 2) {
+			this.hp =100;
+			this.name = "슬라임";
+		}else if(level == 3){
+			this.hp = 700;
+			this.name = "스톤골램";
+		}else if(level == 4){
+			this.hp = 5000;
+			this.name = "....자바";
+		}else {
+			// 에러 잡아
+		}
+	}
+	public void attack(int damege) {
+		this.hp -= damege;
+		System.out.println(this.name+"의 체력 : " + this.hp);
+	}
+	public int getHp() {
+		return this.hp;
+	}
+	public int die(User user) {
+		if(level == 0) {
+			user.setMoney(50);
+			return 50;
+		}else if(level == 1) {
+			user.setMoney(500);
+			return 200;
+		}else if(level == 2){
+			user.setMoney(2500);
+			return 2500;
+		}else if(level == 3){
+			user.setMoney(10000);
+			return 10000;
+		}else {
+			// 에러 잡아
+			return 0;
+		}
+	}
+	
+}

@@ -4,4 +4,6 @@
     <fullyQualifiedTypeName name="freedomgame.Action"/>
     <fullyQualifiedTypeName name="gmae.controller.GameController"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="freedomgame.Weapon"/>
 </qualifiedTypeNameHistroy>
