@@ -21,39 +21,7 @@ public class GameModel {
 			try {
 				num = action.playList();
 				
-				if (num == 0) {
-					user.getImfomation();
-				}
-				else if(num == 1) {
-					System.out.println();
-					System.out.println("보유금액 : "+user.getMoney());
-					while(outStage) {
-						switch(action.goShop()) {
-							case 0:
-								user.getImfomation();
-								break;
-							case 1:
-								action.buyWeapon(user);
-								break;
-							case 2:
-								if(action.enforceWeapon(user) == 0) {
-									System.out.println("돈이 부족합니다.");
-								}
-								else if(action.enforceWeapon(user) == 1) {
-									System.out.println("강화 성공");
-								}
-								else if(action.enforceWeapon(user) == 2) {
-									System.out.println("강화 실패");
-								}else if(action.enforceWeapon(user) == 3) {
-									System.out.println("강화 불가능");
-								}
-								break;
-							case 3:
-								outStage = false;
-								break;
-						}	
-					}
-				}else if(num == 2) {
+				else if(num == 2) {
 					// 10초안에 죽이면 성공 아니면 실패
 					while(true) { 
 						int level =action.goDongoen();
@@ -90,11 +58,13 @@ public class GameModel {
 				}else if(num == 3) {
 					power = action.endGame();
 						}
+				else {
+						//다른 번호 눌렀을때 예외로 처리해보자.
+					}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
-			catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 			}
 		}
 	}
-}

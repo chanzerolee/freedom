@@ -1,11 +1,12 @@
 package freedomgame;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Action {
 	Scanner sn = new Scanner(System.in);
-	public int playList() {
+	public int playList() throws IOException {
 		System.out.println();
 		System.out.println("***광장***");
 		System.out.println("0. 유저 정보 확인");
@@ -13,9 +14,7 @@ public class Action {
 		System.out.println("2. 던전");
 		System.out.println("3. 종료하기");
 		System.out.print("입력 : ");
-		
 		return sn.nextInt();
-		
 	}
 	public boolean endGame() {
 		System.out.println();
