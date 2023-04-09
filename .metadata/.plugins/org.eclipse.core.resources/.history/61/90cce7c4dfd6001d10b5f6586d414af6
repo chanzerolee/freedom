@@ -4,7 +4,7 @@ public class User {
 	// 돈 ,공격력 ,강화등급 ,무기 ,가격
 	private String id;
 	public User(String id){
-		this.id=id; 
+		this.id; 
 	}
 	
 	private String weapon = "PUNCH";

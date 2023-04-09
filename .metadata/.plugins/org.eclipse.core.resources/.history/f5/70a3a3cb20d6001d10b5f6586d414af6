@@ -1,6 +1,5 @@
 package game.model;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import freedomgame.Action;
@@ -8,15 +7,8 @@ import freedomgame.Monster;
 import freedomgame.User;
 
 public class GameModel {
-	ArrayList<User> user = new ArrayList<>();
+	User user = new User();
 	Action action = new Action();
-	public void gameStart(String id) {
-		user.add(new User(id));
-		System.out.println("id가 생성 되었습니다.");
-	}
-	public void plazaAction(int num) {
-		
-	}
 	public void playGame() {
 		boolean power = true;
 		Scanner input = new Scanner(System.in);

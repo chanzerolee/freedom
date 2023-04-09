@@ -11,11 +11,7 @@ public class GameModel {
 	ArrayList<User> user = new ArrayList<>();
 	Action action = new Action();
 	public void gameStart(String id) {
-		user.add(new User(id));
-		System.out.println("id가 생성 되었습니다.");
-	}
-	public void plazaAction(int num) {
-		
+		user.add(User(id));
 	}
 	public void playGame() {
 		boolean power = true;

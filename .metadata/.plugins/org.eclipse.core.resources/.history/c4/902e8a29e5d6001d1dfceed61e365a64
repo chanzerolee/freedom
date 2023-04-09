@@ -21,8 +21,9 @@ public class StartView {
 				System.out.println("2. 던전");
 				System.out.println("3. 종료하기");
 				System.out.print("입력 : ");				
-//				gc.plazaActioin(input);
+				gc.plazaActioin(input);
 			}
 		}
 		
+	}
 }

@@ -1,0 +1,20 @@
+package game.view;
+
+import gmae.controller.GameController;
+
+public class StartView {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		GameController gc = new GameController();
+		System.out.print("ID를 입력해 주세요 : ");
+		
+		gc.gameStart();
+		
+		
+		while(true) {
+			
+		}
+		gc.playGame();
+		
+	}
+}

@@ -14,9 +14,6 @@ public class GameModel {
 		user.add(new User(id));
 		System.out.println("id가 생성 되었습니다.");
 	}
-	public void plazaAction(int num) {
-		
-	}
 	public void playGame() {
 		boolean power = true;
 		Scanner input = new Scanner(System.in);

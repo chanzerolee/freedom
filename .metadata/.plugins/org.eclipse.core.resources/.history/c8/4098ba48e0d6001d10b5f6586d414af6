@@ -12,10 +12,7 @@ public class GameModel {
 	Action action = new Action();
 	public void gameStart(String id) {
 		user.add(new User(id));
-		System.out.println("id가 생성 되었습니다.");
-	}
-	public void plazaAction(int num) {
-		
+		System.out.println("id가 생성 되었습니다.");'
 	}
 	public void playGame() {
 		boolean power = true;
